@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include('partials/header')%>
+    <title>New Book</title>
+</head>
+<body>
+
+    <%-include ('partials/navigation')%>
+
+    <div class="container p-4">
+        <form method="POST" action="/new-entry" class="card card-body text-white bg-secondary mb-3">
+            <!--El form-group agrupa un input-->
+            <div class="form-group">
+                <label for="title">Nombre de los tenis</label>
+                <input type="text" class="form-control" name="title" id="title" placeholder="Ingresa nombre del producto" autofocus required> 
+            </div>
+            <div class="form-group">
+                <label for="author">URL</label>
+                <input type="text" class="form-control" name="author" id="author" placeholder="Ingresa URL" autofocus required> 
+            </div>
+            <div class="form-group">
+                <label for="image">URL de la imagen</label>
+                <input type="text" class="form-control" name="image" id="image" placeholder="http://website.com" autofocus required> 
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea name="description" id="description" rows="2" class="form-control"></textarea>
+            </div>
+        <input type="submit" value="Save Book" class="btn btn-secondary btn-lg" >
+        </form>
+    </div>
+</body>
+</html>
