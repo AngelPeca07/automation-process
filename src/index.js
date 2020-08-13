@@ -9,10 +9,11 @@ async function main () {
 
 main();
 
-var task = cron.schedule("46 15 * 7 *", function() {
+var task = cron.schedule("25 16 * 7 *", function() {
     console.log("schedule running...");
     cypress.run ({
-        spec: './cypress/integration/main.js',
+        //spec: './cypress/integration/main.js',
+        spec: './cypress/integration/innvictus.process.js',
         //spec: specs[`${specStored}`],
         headless: true,
         //browser: "electron",

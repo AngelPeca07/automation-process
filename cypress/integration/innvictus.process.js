@@ -12,7 +12,15 @@ Cypress.on('uncaught:exception', (err, runnable) => {
         const url = data[0].author;
       it("Should try to buy a pair of shoes", function() {
         cy.visit(url);
-        cy.wait(10000);
-        cy.scrollTo(0, 500);
+        cy.wait(5000);
+        cy.get('.is-sizeSelector__sizes__option-wrapper').contains('30.5').click();
+      });
+      it("Log In", function() {
+        cy.get('#j_username').type('apecast.tech@gmail.com');
+        cy.get('#j_password').type('xJvad.NhpTm24R3');
+        cy.get('.buttons').eq(0).click();
+      });
+      it("Check the landing page...", function() {
+        cy.get('a').contains("Mi cuenta");
       });
     });
